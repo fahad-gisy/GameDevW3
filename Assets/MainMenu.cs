@@ -21,4 +21,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("level1");
     }
+
+    public void HowToPlayBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 }
