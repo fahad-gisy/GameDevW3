@@ -18,7 +18,7 @@ public class FPSMovingWThree : MonoBehaviour
     private GameObject winObj;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI heartText;
-    public int health = 10;
+    public float health = 10;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
