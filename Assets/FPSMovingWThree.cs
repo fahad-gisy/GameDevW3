@@ -1,14 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+
+using TMPro;
 using UnityEngine;
+
 
 public class FPSMovingWThree : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody rb;
-    [SerializeField] private float speed = 10;
+    [SerializeField] public float speed = 10;
     [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private Transform groundCheck;
     private bool isJumping = true;
@@ -17,12 +16,15 @@ public class FPSMovingWThree : MonoBehaviour
     public float jumpH = 250f;
     public int coinCount = 0;
     private GameObject winObj;
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI heartText;
+    public int health = 10;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         winObj = GameObject.Find("WinObj");
         winObj.SetActive(false);
-        
+
     }
 
     // Update is called once per frame
@@ -41,7 +43,10 @@ public class FPSMovingWThree : MonoBehaviour
             facing = Mathf.Atan2(movements.x, movements.z) * Mathf.Rad2Deg;
         }//rotating our rigidbody to the way the player moving to
         rb.rotation = Quaternion.Euler(0,facing,0);
-
+        
+        
+        coinText.text = coinCount.ToString();//Coin text
+        heartText.text = health.ToString(); // Health text
         Jump();
         Win(); 
      
@@ -73,6 +78,7 @@ public class FPSMovingWThree : MonoBehaviour
    {
        if (coinCount >= 20)
        {
+           Debug.Log("GZ YOU NOW HAVE 20 COINS");
            _soundActionsScript.PlayerWinSound();
            winObj.SetActive(true);
        }

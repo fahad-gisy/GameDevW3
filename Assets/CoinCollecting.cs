@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinCollecting : MonoBehaviour
 {
     // Start is called before the first frame update
     public SoundActions _soundActions;
-    
-    
+
     void Start()
     {
      
