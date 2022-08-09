@@ -26279,7 +26279,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -28905,7 +28905,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5996276, y: 1}
+    m_SensorSize: {x: 1.1963788, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -34251,7 +34251,7 @@ MonoBehaviour:
   speed: 1
   rotationSpeed: 1
   startPoint: {x: -49.88, y: 3.283, z: -12.53}
-  endPoint: {x: -40.72, y: 3.283, z: -25.19}
+  endPoint: {x: -49, y: 3.283, z: -25.19}
 --- !u!135 &1164929860
 SphereCollider:
   m_ObjectHideFlags: 0

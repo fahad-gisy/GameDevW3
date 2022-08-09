@@ -1,4 +1,4 @@
-
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
 
@@ -48,14 +48,22 @@ public class FPSMovingWThree : MonoBehaviour
         coinText.text = coinCount.ToString();//Coin text
         heartText.text = health.ToString(); // Health text
         Jump();
-        Win(); 
-     
-        
-        
+        Win();
+        Lose();
+
+
+
 
     }//Horizontal //Vertical
 
-   
+    private void Lose()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+        
+    }
 
     private void Jump()
    {

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         gameTimer.text = ("" + timeLeft);
         if (timeLeft <= 0 )
         {
-            
+            SceneManager.LoadScene("LoseScene");
         }
     }
 

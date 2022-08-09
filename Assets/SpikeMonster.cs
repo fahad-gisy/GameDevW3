@@ -19,7 +19,7 @@ public class SpikeMonster : MonoBehaviour
     void Update()
     {
         transform.Rotate(0,rotationSpeed,0);
-        transform.localPosition = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time,1) * speed);
+        transform.position = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time,1) * speed);
 
     }
 
